@@ -1,0 +1,326 @@
+/* GENERAL PAGE  */
+body {
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(232, 245, 233, 0.35),
+            rgba(227, 242, 253, 0.35)
+        ),
+        url("SCICLUBBG.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    color: #344b3b;
+    padding: 20px 0;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 900px;
+    animation: fadeIn 0.9s ease both;
+}
+
+/* MAIN GLASS CARD  */
+.main-card {
+    background: rgba(255, 255, 255, 0.76);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 28px;
+
+    padding: 40px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+
+    box-shadow: 0 15px 40px rgba(30, 70, 50, 0.18);
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.main-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(30, 70, 50, 0.23);
+}
+
+/*  CENTERED, BIGGER SCIENCE CLUB LOGO */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 25px auto;
+}
+
+.club-logo {
+    display: block;
+    width: 220px;
+    height: 220px;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+
+    filter: drop-shadow(0 5px 12px rgba(25, 135, 84, 0.2));
+
+    animation: logoFloat 4s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.club-logo:hover {
+    transform: scale(1.08);
+}
+
+/* Floating animation */
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+/*  TITLE AND SUBTITLE  */
+.title {
+    color: #198754;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-align: center;
+
+    animation: slideDown 0.8s ease both;
+}
+
+.subtitle {
+    color: #64776b;
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/*  INPUT SECTION  */
+.input-section {
+    background: rgba(240, 251, 242, 0.78);
+    border: 1px solid rgba(220, 239, 225, 0.85);
+    border-radius: 22px;
+    padding: 26px;
+    margin-top: 25px;
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    box-shadow: 0 6px 18px rgba(70, 130, 90, 0.07);
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.input-section:focus-within {
+    border-color: #83c99d;
+    box-shadow: 0 8px 24px rgba(25, 135, 84, 0.13);
+}
+
+/*  TEXT BOXES AND DROPDOWN  */
+.form-control,
+.form-select {
+    border: 1px solid #d7e5da;
+    border-radius: 12px;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease,
+                transform 0.25s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #48a86e;
+    box-shadow: 0 0 0 4px rgba(25, 135, 84, 0.12);
+    transform: translateY(-1px);
+}
+
+/*  ADD MEMBER BUTTON  */
+.btn-success {
+    background: linear-gradient(135deg, #198754, #35a66a);
+    border: none;
+    border-radius: 13px;
+    padding: 12px 24px;
+
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    box-shadow: 0 5px 14px rgba(25, 135, 84, 0.2);
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #157347, #278d56);
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px rgba(25, 135, 84, 0.28);
+}
+
+.btn-success:active {
+    transform: scale(0.97);
+}
+
+/*RESULTS PANEL  */
+#output {
+    background: rgba(248, 255, 249, 0.84);
+    color: #214d32;
+
+    border: 1px solid rgba(220, 239, 225, 0.85);
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 25px;
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    box-shadow: 0 8px 22px rgba(50, 100, 70, 0.08);
+
+    animation: fadeIn 0.7s ease both;
+}
+
+/*GRADE HEADINGS */
+.grade-title {
+    color: #198754;
+    font-weight: 800;
+    font-size: 1.15rem;
+
+    padding: 10px 14px;
+    margin-top: 18px;
+    margin-bottom: 12px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(224, 244, 229, 0.95),
+        rgba(241, 251, 243, 0.8)
+    );
+
+    border-left: 5px solid #36a269;
+    border-radius: 8px 13px 13px 8px;
+}
+
+/* MEMBER LIST DESIGN */
+.member-list {
+    line-height: 2;
+    padding: 5px 12px;
+    color: #456451;
+}
+
+.member-list div {
+    padding: 5px 10px;
+    border-radius: 8px;
+
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.member-list div:hover {
+    background: rgba(220, 244, 226, 0.85);
+    transform: translateX(5px);
+}
+
+/* TOTAL MEMBERS */
+.total {
+    color: #198754;
+    font-weight: 800;
+    font-size: 1.1rem;
+
+    background: rgba(228, 245, 233, 0.9);
+    border: 1px solid #d0ebd8;
+    border-radius: 14px;
+
+    padding: 15px 18px;
+    margin-top: 25px;
+}
+
+/* ANIMATIONS  */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+/*  MOBILE RESPONSIVENESS */
+@media (max-width: 576px) {
+    body {
+        padding: 10px 0;
+        background-attachment: scroll;
+    }
+
+    .main-card {
+        padding: 22px;
+        margin-top: 15px;
+        border-radius: 20px;
+    }
+
+    .club-logo {
+        width: 105px;
+        height: 105px;
+    }
+
+    .input-section {
+        padding: 18px;
+    }
+
+    #output {
+        padding: 16px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
